@@ -1,0 +1,5 @@
+# Dizin denetimi bu sistem dosyalarını engeller
+Thumbs.db
+desktop.ini
+.DS_Store
+__MACOSX/

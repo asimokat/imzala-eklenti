@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "imzala",
+  "version": "1.0.0",
+  "description": "imzala.net Türk içtihat arşivi: arama, karar metni, künye doğrulama, dilekçe yazımı.",
+  "author": {
+    "name": "imzala.net",
+    "url": "https://imzala.net"
+  },
+  "license": "MIT",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "imzala.net İçtihat Arşivi",
+        "shortDescription": "Türk içtihat arşivi",
+        "longDescription": "imzala.net içtihat arşivini ChatGPT içinden kullanın. Arşivde 11,5 milyon Türk yargı ve kurul kararı var: Yargıtay, Danıştay, Hukuk ve Ceza Genel Kurulları, İçtihadı Birleştirme, Anayasa Mahkemesi, AİHM, Sayıştay, KİK, KDK, Rekabet Kurumu, TİHEK, Uyuşmazlık Mahkemesi, bölge adliye ve yerel mahkemeler. Ayrıca 2000'den bugüne Resmî Gazete tam metni, kanun maddesi haritası, 98 bin tez ve makale künyesi, TCMB ve TÜİK faiz, endeks ve kur verisi, TBMM'deki kanun teklifleri, künye doğrulama ve derin araştırma sunar.\n\nCevabı ChatGPT yazar; kararın metnini, künyesini ve resmî kaynak bağlantısını arşivden alır. Kelime araması ile anlam araması birlikte çalışır. Paketteki iki skill, araştırma yöntemini (okunmayan karara atıf yok, künye doğrulanır) ve Türk dilekçe biçimini öğretir; dilekçe UYAP'ın UDF biçimine de çevrilebilir.\n\nBütün aletler salt okunurdur; arşive veri yazılmaz. Giriş e-posta doğrulamasıyla yapılır. Arama aletlerinin sorgu metni sunucuda kaydedilmez; derin araştırmada sorunun ilk 300 karakteri iş kaydına yazılır ve araştırma Google Gemini ile yürütülür. Hizmet Türkçedir. Bir imzala.net hesabı gerekir.",
+        "developerName": "imzala.net",
+        "category": "Productivity",
+        "capabilities": [
+          "Karar ara",
+          "Karar metnini oku",
+          "Künye doğrula",
+          "Kanun maddesi haritası",
+          "Derin araştırma"
+        ],
+        "websiteURL": "https://imzala.net/yapay-zeka",
+        "supportURL": "https://imzala.net/yardim",
+        "privacyPolicyURL": "https://imzala.net/api-gizlilik",
+        "termsOfServiceURL": "https://imzala.net/api-kosullar",
+        "defaultPrompt": [
+          "Belirsiz alacak davasında ıslah konusunda Yargıtay ne diyor?",
+          "Yargıtay 3. HD 2023/1532 E. 2024/250 K. kararı gerçekten var mı?",
+          "HMK 107. maddeye dayanan kararlarda hangi daire baskın?"
+        ],
+        "composerIcon": "./assets/icon.png",
+        "composerIconDark": "./assets/icon-dark.png",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md"
+    }
+  },
+  "homepage": "https://imzala.net/yapay-zeka",
+  "repository": "https://github.com/asimokat/imzala-eklenti"
+}
