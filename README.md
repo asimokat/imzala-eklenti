@@ -25,6 +25,7 @@ Arşivde 11,5 milyon Türk yargı ve kurul kararı, doktrin künyeleri, Resmî G
 | Qwen Code | `qwen extensions install asimokat/imzala-eklenti` |
 | GitHub Copilot CLI | `copilot plugin install asimokat/imzala-eklenti` |
 | Kiro | Powers → Add Custom Power → `https://github.com/asimokat/imzala-eklenti` |
+| Cline | Cline'a "https://github.com/asimokat/imzala-eklenti deposundaki llms-install.md'ye göre imzala MCP sunucusunu kur" deyin ya da `llms-install.md`'deki girdiyi MCP ayarlarına ekleyin. |
 | JetBrains Junie | `/extensions marketplace add asimokat/imzala-claude-eklenti` (Claude biçimindeki depo) |
 | Cursor, VS Code, Goose, Perplexity ve diğerleri | MCP sunucusu olarak `https://mcp.imzala.net/mcp` adresini ekleyin (Streamable HTTP). |
 
