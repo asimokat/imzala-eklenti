@@ -8,8 +8,11 @@ imzala.net is a hosted remote MCP server for Turkish case law. There is nothing 
 
 ## Cline
 
-1. Open Cline's MCP settings file (MCP Servers → Configure → Configure MCP Servers): `cline_mcp_settings.json`.
-2. Add this entry under `mcpServers` and keep any existing entries:
+1. Open Cline's own MCP settings file. Cline reads only this file; do not create a new `cline_mcp_settings.json` in the project folder.
+   - Cline 4.x (VS Code, Cursor, JetBrains, CLI): `~/.cline/data/settings/cline_mcp_settings.json` (Windows: `%USERPROFILE%\.cline\data\settings\cline_mcp_settings.json`).
+   - Older Cline 3.x VS Code extension: `<editor user folder>/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json` (Windows VS Code: `%APPDATA%\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json`).
+   - If neither exists, ask the user to open it with MCP Servers → Configure → Configure MCP Servers.
+2. Read the file, then add this entry under `mcpServers` and keep any existing entries:
 
 ```json
 "imzala": {
