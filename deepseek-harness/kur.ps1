@@ -20,15 +20,20 @@ function Yaz([string]$yol, [string]$metin) { [IO.File]::WriteAllText($yol, $meti
 $yama = Join-Path $dsh "profiles\$Profil\cordis.patch.yml"
 if (-not (Test-Path $yama)) { throw "Bulunamadı: $yama. DeepSeek Harness'ı bir kez açıp kapatın, sonra yeniden deneyin." }
 $metin = Oku $yama
-if ($metin -match '(?m)^\s*-\s*id:\s*mcp-imzala\s*$') {
-  Write-Host 'MCP yaması zaten var; dokunulmadı.'
+$sat = if ($metin.Contains("`r`n")) { "`r`n" } else { "`n" }
+$lf = $metin -replace "`r`n", "`n"
+# Önceki imzala girdisini (eski düz biçim ya da insert biçimi, başındaki imzala yorumlarıyla) çıkar, güncelini ekle.
+$eski = '(?m)^(?:#[^\n]*(?:imzala|IMZALA|Yama katman)[^\n]*\n)*- (?:insert:\n[ \t]+- )?id: mcp-imzala[ \t]*\n(?:[ \t]+[^\n]*(?:\n|$))*'
+$govde = ([regex]::Replace($lf, $eski, '')).TrimEnd("`n")
+$parca = (Oku (Join-Path $burasi 'cordis.patch.yml')) -replace "`r`n", "`n"
+$yeni = $(if ($govde.Length) { $govde + "`n" } else { '' }) + $parca
+if (-not $yeni.EndsWith("`n")) { $yeni += "`n" }
+if ($yeni -eq $lf) {
+  Write-Host 'MCP yaması zaten güncel; dokunulmadı.'
 } else {
   Copy-Item $yama "$yama.yedek-$damga"
-  $sat = if ($metin.Contains("`r`n")) { "`r`n" } else { "`n" }
-  $parca = ((Oku (Join-Path $burasi 'cordis.patch.yml')) -replace "`r`n", "`n") -replace "`n", $sat
-  if ($metin.Length -gt 0 -and -not $metin.EndsWith("`n")) { $metin += $sat }
-  Yaz $yama ($metin + $parca)
-  Write-Host "MCP yaması eklendi. Yedek: $yama.yedek-$damga"
+  Yaz $yama ($yeni -replace "`n", $sat)
+  Write-Host "MCP yaması yazıldı. Yedek: $yama.yedek-$damga"
 }
 
 # 2) Skill'ler

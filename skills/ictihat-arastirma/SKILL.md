@@ -9,7 +9,7 @@ Bu skill, imzala içtihat bağlayıcısının aletleriyle Türk hukukunda karar 
 
 ## Bağlayıcı bağlı değilse
 
-Aşağıdaki aletler görünmüyorsa kullanıcıdan imzala bağlayıcısını bağlamasını iste: eklentinin **Connectors** sekmesi → bağlan → imzala.net sayfasında e-posta → gelen 6 haneli kod. Bağlantı yokken ezberden karar, künye ya da alıntı yazma.
+Aşağıdaki aletler görünmüyorsa kullanıcıdan imzala bağlantısını kurmasını iste. Yol araca göre değişir (https://github.com/asimokat/imzala-eklenti README'sindeki kurulum tablosu): giriş ekranını destekleyen araçlarda imzala.net sayfası açılır, e-posta ve gelen 6 haneli kodla bağlanılır; desteklemeyenlerde https://mcp.imzala.net/anahtar adresinden alınan kişisel anahtar kullanılır. Bağlantı yokken ezberden karar, künye ya da alıntı yazma.
 
 ## Çalışma düzeni
 

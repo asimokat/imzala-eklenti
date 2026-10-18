@@ -1,10 +1,12 @@
 # imzala.net içtihat arşivi: https://imzala.net/yapay-zeka
 # Anahtar IMZALA_ANAHTAR ortam değişkeninden okunur; anahtar https://mcp.imzala.net/anahtar adresinden alınır.
-- id: mcp-imzala
-  name: '@deepseek-ai/dsh-mcp-client'
-  config:
-    serverName: imzala
-    transport: streamable-http
-    url: https://mcp.imzala.net/mcp
-    headers:
-      Authorization: !!js '`Bearer ${process.env.IMZALA_ANAHTAR}`'
+# Yama katmanında yeni bir girdi "insert" ile eklenir; id'li düz girdi var olan bir satırı hedefler ve atlanır.
+- insert:
+    - id: mcp-imzala
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: imzala
+        transport: streamable-http
+        url: https://mcp.imzala.net/mcp
+        headers:
+          Authorization: !!js '`Bearer ${process.env.IMZALA_ANAHTAR}`'
