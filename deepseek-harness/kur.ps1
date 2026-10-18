@@ -2,10 +2,11 @@
 #   1) Profilin cordis.patch.yml dosyasına imzala MCP girdisini ekler; önce yedek alır.
 #   2) ictihat-arastirma ve dilekce-yazimi skill'lerini ~/.dsh/skills altına kopyalar.
 #   3) Kısa çalışma kurallarını ~/.dsh/AGENTS.md içine işaretli bir bölüm olarak yazar.
-#   4) IMZALA_ANAHTAR tanımlı değilse anahtarı sorar; boş geçilebilir.
+#   4) IMZALA_ANAHTAR tanımlı değilse anahtarı gizli olarak sorar; boş geçilebilir.
+#      -AnahtarYenile: tanımlı olsa da yeni anahtarı sorar (anahtar değiştirildiğinde).
 # Yeniden çalıştırmak güvenlidir: yama ikinci kez eklenmez, kurallar bölümü yenilenir.
-# Kullanım: powershell -ExecutionPolicy Bypass -File kur.ps1 [-Profil desktop] [-AnahtarSorma]
-param([string]$Profil = 'desktop', [switch]$AnahtarSorma)
+# Kullanım: powershell -ExecutionPolicy Bypass -File kur.ps1 [-Profil desktop] [-AnahtarSorma | -AnahtarYenile]
+param([string]$Profil = 'desktop', [switch]$AnahtarSorma, [switch]$AnahtarYenile)
 $ErrorActionPreference = 'Stop'
 $utf8 = New-Object System.Text.UTF8Encoding $false
 $burasi = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -69,8 +70,8 @@ if (Test-Path $agents) {
 Write-Host "Çalışma kuralları yazıldı: $agents"
 
 # 4) Anahtar
-if ([Environment]::GetEnvironmentVariable('IMZALA_ANAHTAR', 'User')) {
-  Write-Host 'IMZALA_ANAHTAR tanımlı.'
+if ([Environment]::GetEnvironmentVariable('IMZALA_ANAHTAR', 'User') -and -not $AnahtarYenile) {
+  Write-Host 'IMZALA_ANAHTAR tanımlı. Anahtarı değiştirdiyseniz betiği -AnahtarYenile ile çalıştırın.'
 } elseif ($AnahtarSorma) {
   Write-Host 'IMZALA_ANAHTAR tanımlı değil. Anahtarı https://mcp.imzala.net/anahtar adresinden alıp kullanıcı ortam değişkeni olarak tanımlayın.'
 } else {

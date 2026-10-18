@@ -38,7 +38,10 @@ DeepSeek Harness uzak MCP sunucusuna giriş ekranıyla bağlanamaz; kişisel ana
 1. [mcp.imzala.net/anahtar](https://mcp.imzala.net/anahtar) adresinden anahtarınızı alın. Anahtar `imz_` ile başlar.
 2. Depoyu indirip açın ve PowerShell'de şunu çalıştırın: `powershell -ExecutionPolicy Bypass -File deepseek-harness\kur.ps1`
    Betik `~/.dsh/profiles/desktop/cordis.patch.yml` dosyasının yedeğini alıp imzala girdisini ekler. Skill'leri `~/.dsh/skills` altına kopyalar, kısa kuralları `~/.dsh/AGENTS.md` dosyasına yazar ve anahtarı sorar.
-3. DeepSeek Harness'ı tamamen kapatıp yeniden açın. Aletler `mcp__imzala__ictihat_ara` gibi adlarla görünür.
+3. DeepSeek Harness'tan tamamen çıkıp uygulamayı yeniden açın. Pencereyi kapatmak yetmez, çünkü uygulama arka planda çalışmaya devam eder. Sistem tepsisindeki simgeye sağ tıklayıp Çıkış'ı (Quit) seçin. Aletler `mcp__imzala__ictihat_ara` gibi adlarla görünür.
+4. Anahtarı değiştirdiğinizde betiği `-AnahtarYenile` ile yeniden çalıştırın, sonra uygulamadan yine tamamen çıkıp açın.
+
+Anahtar yalnız `IMZALA_ANAHTAR` kullanıcı ortam değişkeninde durur. Yapılandırma dosyasına ya da sohbete yazılmamalıdır.
 
 Elle kurmak isterseniz:
 - `deepseek-harness/cordis.patch.yml` içeriğini profilinizin `cordis.patch.yml` dosyasının sonuna ekleyin.

@@ -13,3 +13,8 @@ Bu kurallar `imzala` MCP sunucusunun aletleri kullanılırken geçerlidir: `icti
 9. Aletler görünmüyorsa kullanıcıdan imzala bağlantısını kurmasını iste. İlk kullanımda imzala.net giriş sayfası açılır; kullanıcı e-postasını yazar, gelen 6 haneli kodu girer ve izin verir. Bağlantı yokken ezberden karar, künye ya da alıntı yazma.
 
 Ayrıntılı yöntem `ictihat-arastirma` skill'inde, dilekçe biçimi `dilekce-yazimi` skill'inde anlatılır.
+
+## DeepSeek Harness'a özgü
+
+- imzala anahtarını (`imz_` ile başlar) hiçbir dosyaya yazma, yapılandırmaya gömme, sohbette gösterme; `IMZALA_ANAHTAR` ortam değişkeninin değerini okuma.
+- `mcp__imzala__` aletleri görünmüyorsa yapılandırmayı kendin düzeltme. Kullanıcıya `deepseek-harness/kur.ps1` betiğini yeniden çalıştırmasını ve DeepSeek Harness'tan sistem tepsisindeki Çıkış ile tamamen çıkıp uygulamayı yeniden açmasını öner.
