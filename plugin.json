@@ -12,10 +12,10 @@
     "com.openai": {
       "interface": {
         "displayName": "imzala.net İçtihat Arşivi",
-        "shortDescription": "Türk içtihat arşivi",
-        "longDescription": "imzala.net içtihat arşivini ChatGPT içinden kullanın. Arşivde 11,5 milyon Türk yargı ve kurul kararı var: Yargıtay, Danıştay, Hukuk ve Ceza Genel Kurulları, İçtihadı Birleştirme, Anayasa Mahkemesi, AİHM, Sayıştay, KİK, KDK, Rekabet Kurumu, TİHEK, Uyuşmazlık Mahkemesi, bölge adliye ve yerel mahkemeler. Ayrıca 2000'den bugüne Resmî Gazete tam metni, kanun maddesi haritası, 98 bin tez ve makale künyesi, TCMB ve TÜİK faiz, endeks ve kur verisi, TBMM'deki kanun teklifleri, künye doğrulama ve derin araştırma sunar.\n\nCevabı ChatGPT yazar; kararın metnini, künyesini ve resmî kaynak bağlantısını arşivden alır. Kelime araması ile anlam araması birlikte çalışır. Paketteki iki skill, araştırma yöntemini (okunmayan karara atıf yok, künye doğrulanır) ve Türk dilekçe biçimini öğretir; dilekçe UYAP'ın UDF biçimine de çevrilebilir.\n\nBütün aletler salt okunurdur; arşive veri yazılmaz. Giriş e-posta doğrulamasıyla yapılır. Arama aletlerinin sorgu metni sunucuda kaydedilmez; derin araştırmada sorunun ilk 300 karakteri iş kaydına yazılır ve araştırma Google Gemini ile yürütülür. Hizmet Türkçedir. Bir imzala.net hesabı gerekir.",
+        "shortDescription": "Türk içtihat araştırması",
+        "longDescription": "Türk hukukçuları için içtihat araştırma aracı: 11,5 milyon Türk yargı ve kurul kararında arama yapar, kararın tam metnini getirir ve bir künyenin gerçekten var olup olmadığını doğrular. Kapsam: Yargıtay, Danıştay, Hukuk ve Ceza Genel Kurulları, İçtihadı Birleştirme, Anayasa Mahkemesi, AİHM, Sayıştay, KİK, KDK, Rekabet Kurumu, TİHEK, Uyuşmazlık Mahkemesi, bölge adliye ve yerel mahkemeler. Ayrıca 2000'den bugüne Resmî Gazete tam metni, kanun maddesi haritası, 98 bin tez ve makale künyesi, TCMB ve TÜİK faiz, endeks ve kur verisi ile TBMM'deki kanun teklifleri sunar.\n\nKelime araması ile anlam araması birlikte çalışır. Kararın künyesi, metni ve resmî kaynak bağlantısı doğrudan arşivden gelir. Paketteki skill'ler araştırma yöntemini (okunmayan karara atıf yok, künye doğrulanır) ve Türk dilekçe biçimini öğretir; dilekçe UYAP'ın UDF biçimine çevrilebilir.\n\nArama ve okuma aletleri salt okunurdur; arşive veri yazılmaz. Derin araştırma aleti ayrıca bir rapor işi başlatır. Giriş e-posta doğrulamasıyla yapılır. Arama sorgularının metni sunucuda saklanmaz; derin araştırmada sorunun ilk 300 karakteri iş kaydına yazılır ve soru, raporu hazırlayan bir dış hizmete iletilir (ayrıntı gizlilik bildiriminde). Hizmet Türkçedir; bir imzala.net hesabı gerekir.",
         "developerName": "imzala.net",
-        "category": "Productivity",
+        "category": "Education & Research",
         "capabilities": [
           "Karar ara",
           "Karar metnini oku",
@@ -41,5 +41,17 @@
     }
   },
   "homepage": "https://imzala.net/yapay-zeka",
-  "repository": "https://github.com/asimokat/imzala-eklenti"
+  "repository": "https://github.com/asimokat/imzala-eklenti",
+  "keywords": [
+    "hukuk",
+    "içtihat",
+    "yargıtay",
+    "danıştay",
+    "dilekçe",
+    "türk hukuku",
+    "turkish law",
+    "case law",
+    "legal research",
+    "mcp"
+  ]
 }

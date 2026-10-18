@@ -58,11 +58,11 @@ Bu biçimde numaralar ve daireler cümlenin içinden art arda geçer, anlatım o
 
 ## Ekler
 
-Dosya sistemine erişim varsa (Cowork, Claude Code):
+Dosya sistemine erişim varsa:
 
 - Dilekçeyle aynı yerde `ekler/` klasörü açılır.
 - Dosya adları `EK-01-...` biçimindedir; numaralar dilekçedekiyle birebir aynı ve boşluksuzdur.
 - Elde olmayan belge ek listesine yazılmaz; gerekiyorsa delil listesinde "celbi talep olunur" satırı olur.
 - Klasöre `00-EKLER-LISTESI.md` konur: hangi ek ne, hangisi eksik, nereden gelecek.
 
-Dosya sistemi yoksa (claude.ai sohbeti) aynı ek listesi metnin sonunda verilir.
+Dosya sistemi yoksa (yalnız sohbet) aynı ek listesi metnin sonunda verilir.

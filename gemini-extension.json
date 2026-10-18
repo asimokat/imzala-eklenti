@@ -1,0 +1,11 @@
+{
+  "name": "imzala",
+  "version": "1.0.0",
+  "description": "imzala.net Türk içtihat arşivi: arama, karar metni, künye doğrulama, dilekçe yazımı.",
+  "mcpServers": {
+    "imzala": {
+      "httpUrl": "https://mcp.imzala.net/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
