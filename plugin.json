@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "imzala",
   "version": "1.0.0",
-  "description": "imzala.net Türk içtihat arşivi: arama, karar metni, künye doğrulama, dilekçe yazımı.",
+  "description": "GÜNLÜK GÜNCELLENİR, HEP TAZE. imzala.net Türk içtihat arşivi: arama, karar metni, künye doğrulama, dilekçe yazımı.",
   "author": {
     "name": "imzala.net",
     "url": "https://imzala.net"
@@ -13,7 +13,7 @@
       "interface": {
         "displayName": "imzala.net İçtihat Arşivi",
         "shortDescription": "Türk içtihat araştırması",
-        "longDescription": "Türk hukukçuları için içtihat araştırma aracı: 11,5 milyon Türk yargı ve kurul kararında arama yapar, kararın tam metnini getirir ve bir künyenin gerçekten var olup olmadığını doğrular. Kapsam: Yargıtay, Danıştay, Hukuk ve Ceza Genel Kurulları, İçtihadı Birleştirme, Anayasa Mahkemesi, AİHM, Sayıştay, KİK, KDK, Rekabet Kurumu, TİHEK, Uyuşmazlık Mahkemesi, bölge adliye ve yerel mahkemeler. Ayrıca 2000'den bugüne Resmî Gazete tam metni, kanun maddesi haritası, 98 bin tez ve makale künyesi, TCMB ve TÜİK faiz, endeks ve kur verisi ile TBMM'deki kanun teklifleri sunar.\n\nKelime araması ile anlam araması birlikte çalışır. Kararın künyesi, metni ve resmî kaynak bağlantısı doğrudan arşivden gelir. Paketteki skill'ler araştırma yöntemini (okunmayan karara atıf yok, künye doğrulanır) ve Türk dilekçe biçimini öğretir; dilekçe UYAP'ın UDF biçimine çevrilebilir.\n\nArama ve okuma aletleri salt okunurdur; arşive veri yazılmaz. Derin araştırma aleti ayrıca bir rapor işi başlatır. Giriş e-posta doğrulamasıyla yapılır. Arama sorgularının metni sunucuda saklanmaz; derin araştırmada sorunun ilk 300 karakteri iş kaydına yazılır ve soru, raporu hazırlayan bir dış hizmete iletilir (ayrıntı gizlilik bildiriminde). Hizmet Türkçedir; bir imzala.net hesabı gerekir.",
+        "longDescription": "GÜNLÜK GÜNCELLENİR, HEP TAZE: yeni kararlar ve Resmî Gazete her gün arşive eklenir.\n\nTürk hukukçuları için içtihat araştırma aracı: 11,5 milyon Türk yargı ve kurul kararında arama yapar, kararın tam metnini getirir ve bir künyenin gerçekten var olup olmadığını doğrular. Kapsam: Yargıtay, Danıştay, Hukuk ve Ceza Genel Kurulları, İçtihadı Birleştirme, Anayasa Mahkemesi, AİHM, Sayıştay, KİK, KDK, Rekabet Kurumu, TİHEK, Uyuşmazlık Mahkemesi, bölge adliye ve yerel mahkemeler. Ayrıca 2000'den bugüne Resmî Gazete tam metni, kanun maddesi haritası, 98 bin tez ve makale künyesi, TCMB ve TÜİK faiz, endeks ve kur verisi ile TBMM'deki kanun teklifleri sunar.\n\nKelime araması ile anlam araması birlikte çalışır. Kararın künyesi, metni ve resmî kaynak bağlantısı doğrudan arşivden gelir. Paketteki skill'ler araştırma yöntemini (okunmayan karara atıf yok, künye doğrulanır) ve Türk dilekçe biçimini öğretir; dilekçe UYAP'ın UDF biçimine çevrilebilir.\n\nArama ve okuma aletleri salt okunurdur; arşive veri yazılmaz. Derin araştırma aleti ayrıca bir rapor işi başlatır. Giriş e-posta doğrulamasıyla yapılır. Arama sorgularının metni sunucuda saklanmaz; derin araştırmada sorunun ilk 300 karakteri iş kaydına yazılır ve soru, raporu hazırlayan bir dış hizmete iletilir (ayrıntı gizlilik bildiriminde). Hizmet Türkçedir; bir imzala.net hesabı gerekir.",
         "developerName": "imzala.net",
         "category": "Education & Research",
         "capabilities": [

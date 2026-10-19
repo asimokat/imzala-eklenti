@@ -1,5 +1,7 @@
 # imzala.net: yapay zekâ eklentisi
 
+**GÜNLÜK GÜNCELLENİR, HEP TAZE:** yeni kararlar ve Resmî Gazete her gün arşive eklenir.
+
 Bu depo imzala.net içtihat arşivini Claude dışındaki yapay zekâ araçlarına bağlayan eklentidir. Aynı içerik birkaç aracın eklenti biçimiyle birlikte durur; her araç kendi dosyasını okur. Claude için ayrı depo: [asimokat/imzala-claude-eklenti](https://github.com/asimokat/imzala-claude-eklenti).
 
 Arşivde 11,5 milyon Türk yargı ve kurul kararı, doktrin künyeleri, Resmî Gazete tam metni, kanun maddesi haritası ve TCMB/TÜİK verisi bulunur. Yapay zekâ cevabı kendisi yazar; kararın metnini, künyesini ve resmî kaynak bağlantısını arşivden alır.
@@ -64,7 +66,7 @@ Sorular ve sorun bildirimi için: [imzala.net/yardim](https://imzala.net/yardim)
 
 ## English summary
 
-This plugin connects AI tools to the imzala.net Turkish case-law archive through a remote MCP server at `https://mcp.imzala.net/mcp` (12 tools; nothing is written to the archive). The same content ships in several formats side by side: Agent Plugins (`plugin.json`, `mcp.json`, `skills/`), Gemini CLI (`gemini-extension.json`, `GEMINI.md`), Google Antigravity (`plugin.json`, `mcp_config.json`, `rules/AGENTS.md`) and DeepSeek Harness (`deepseek-harness/`: a `cordis.patch.yml` fragment that connects with a personal API key, plus an installer script). It includes a research-method skill, a Turkish petition-writing skill with a Markdown-to-UDF converter (standard-library Python, no network access) and an onboarding skill. Sign-in is by e-mail code (OAuth 2.1 with dynamic client registration and client ID metadata documents); tools without OAuth can use a personal API key as a Bearer token. The service is paid and starts with a 14-day trial. The content is in Turkish. Support: https://imzala.net/yardim · Privacy policy: https://imzala.net/api-gizlilik
+This plugin connects AI tools to the imzala.net Turkish case-law archive, updated daily, through a remote MCP server at `https://mcp.imzala.net/mcp` (12 tools; nothing is written to the archive). The same content ships in several formats side by side: Agent Plugins (`plugin.json`, `mcp.json`, `skills/`), Gemini CLI (`gemini-extension.json`, `GEMINI.md`), Google Antigravity (`plugin.json`, `mcp_config.json`, `rules/AGENTS.md`) and DeepSeek Harness (`deepseek-harness/`: a `cordis.patch.yml` fragment that connects with a personal API key, plus an installer script). It includes a research-method skill, a Turkish petition-writing skill with a Markdown-to-UDF converter (standard-library Python, no network access) and an onboarding skill. Sign-in is by e-mail code (OAuth 2.1 with dynamic client registration and client ID metadata documents); tools without OAuth can use a personal API key as a Bearer token. The service is paid and starts with a 14-day trial. The content is in Turkish. Support: https://imzala.net/yardim · Privacy policy: https://imzala.net/api-gizlilik
 
 ## Lisans
 
