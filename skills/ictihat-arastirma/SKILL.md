@@ -41,7 +41,7 @@ Aşağıdaki aletler görünmüyorsa kullanıcıdan imzala bağlantısını kurm
 
 ## Dikkat edilecekler
 
-- **Aletleri sırayla çağır.** Sunucu bir hesaptan aynı anda tek çağrı kabul eder; iki alet birlikte çağrılırsa biri "Aynı anda en çok 1 çağrı" hatasıyla döner. Dakikalık istek tavanı dolarsa doğrulanamayan künyeleri kullanıcıya açıkça söyle.
+- **Aletleri sırayla çağır.** Sunucu bir hesaptan aynı anda sınırlı sayıda çağrı çalıştırır; fazlası sıraya girer, süren çağrı uzarsa "Aynı anda en çok … çağrı" hatasıyla döner. Bu hatada öncekinin bitmesini bekleyip yeniden çağır. Dakikalık istek tavanı dolarsa doğrulanamayan künyeleri kullanıcıya açıkça söyle.
 - **Tırnak içine yalnız birebir söz al.** Karar metninde aynen geçmeyen ifadeyi tırnağa koyma. Özetlediğin görüşü, karşı oy dahil, tırnaksız yaz.
 - **Teklif kanun değildir.** `hukuk_gundemi` ile gelen kanun teklifi yasalaşmamıştır ve dilekçeye dayanak yapılmaz. Anılacaksa durumuyla birlikte yazılır: KOMİSYONDA, GÜNDEMDE ya da KANUNLAŞTI.
 - **Sayıyı hafızadan yazma.** Faiz oranı, endeks ve kur `veri_getir` ile alınır ve kaynağı yazılır. Endekste hangi ölçütün kullanıldığı açıkça belirtilir.
