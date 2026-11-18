@@ -1,11 +1,11 @@
 ---
 name: get-started
-description: imzala.net içtihat arşivine ilk kez bağlanan kullanıcıya ne yapılabileceğini ve ilk soruları gösterir.
+description: imzala.net içtihat ve mevzuat arşivine ilk kez bağlanan kullanıcıya ne yapılabileceğini ve ilk soruları gösterir.
 ---
 
 # imzala.net ile başlarken
 
-imzala.net, Türk yargı ve kurul kararlarından oluşan bir içtihat arşividir: Yargıtay, Danıştay, Hukuk ve Ceza Genel Kurulları, İçtihadı Birleştirme, Anayasa Mahkemesi, AİHM, Sayıştay, KİK, KDK, Rekabet Kurumu, TİHEK, Uyuşmazlık Mahkemesi, bölge adliye ve yerel mahkemeler. Ayrıca Resmî Gazete tam metni, kanun maddesi haritası, doktrin künyeleri ve TCMB/TÜİK verisi içerir.
+imzala.net, Türk yargı ve düzenleyici kurul kararları ile yürürlükteki mevzuatı bir araya getiren bir hukuk arşividir: Yargıtay, Danıştay, Hukuk ve Ceza Genel Kurulları, İçtihadı Birleştirme, Anayasa Mahkemesi, AİHM, Sayıştay, KİK, KDK, Rekabet, TİHEK, KVKK, SPK, BDDK, BTK, HSK, TBB, Ticaret Sicili Gazetesi, Uyuşmazlık Mahkemesi, bölge adliye ve yerel mahkemeler, GİB özelgeleri. Ayrıca madde madde mevzuat, kararlar arası çift yönlü atıf ağı, usul süresi ve tarife/faiz/harç hesaplayıcıları, Resmî Gazete tam metni, TÜRKPATENT bültenleri, kanun maddesi haritası, doktrin künyeleri ve TCMB/TÜİK/GİB verisi içerir.
 
 ## İlk bağlantı
 
@@ -14,9 +14,9 @@ Bağlayıcı ilk kullanıldığında imzala.net giriş sayfası açılır. Kulla
 ## Kullanıcıya önerilecek ilk sorular
 
 - "Belirsiz alacak davasında ıslah konusunda Yargıtay ne diyor?"
-- "Yargıtay 3. HD 2023/1532 E. 2024/250 K. kararı gerçekten var mı?"
-- "HMK 107. maddeye dayanan kararlarda hangi daire baskın?"
+- "TBK 344. maddenin güncel metnini getir ve kira tespiti emsallerini bul."
+- "Yargıtay 3. HD 2023/1532 E. 2024/250 K. kararı gerçekten var mı, sonradan hangi kararlar atıf yapmış?"
 
 ## Nasıl çalışılır
 
-Karar araştırmasında `ictihat-arastirma` skill'ini, dilekçe yazımında `dilekce-yazimi` skill'ini izle. Künyeyi ve alıntıyı yalnız arşivden okunan karar metninden al.
+Araştırmada `ictihat-arastirma` skill'ini, dilekçe yazımında `dilekce-yazimi` skill'ini izle. Künyeyi ve alıntıyı yalnız arşivden okunan karar ve kanun metninden al.

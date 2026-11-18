@@ -25,7 +25,7 @@ imzala.net is a hosted remote MCP server for Turkish case law. There is nothing 
 
 3. Save the file. When the server asks for authorization, use the **Authenticate** action for `imzala` in the MCP Servers view. An imzala.net page opens in the browser: the user types their e-mail address, enters the 6-digit code sent to it and approves the connection.
 4. If OAuth is not possible in this client, ask the user for a personal API key from https://mcp.imzala.net/anahtar (it starts with `imz_`) and add `"headers": { "Authorization": "Bearer <key>" }` to the entry. Never invent a key; the user must paste it.
-5. Check the connection: the server exposes 12 tools, among them `ictihat_ara`, `karar_getir` and `kunye_dogrula`. Call `kunye_dogrula` with `esas` "2023/1532" and `karar` "2024/250"; the result should say the decision exists (Yargıtay 3. Hukuk Dairesi, 18.01.2024).
+5. Check the connection: the server exposes 24 tools, among them `ictihat_ara`, `karar_getir`, `mevzuat_getir`, `sure_hesapla`, `hukuk_hesapla`, `karar_atiflari` and `kunye_dogrula`. Call `kunye_dogrula` with `esas` "2023/1532" and `karar` "2024/250"; the result should say the decision exists (Yargıtay 3. Hukuk Dairesi, 18.01.2024).
 
 ## Other MCP clients
 
