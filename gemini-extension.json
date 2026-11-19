@@ -1,6 +1,6 @@
 {
   "name": "imzala",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "GÜNLÜK GÜNCELLENİR, HEP TAZE. imzala.net Türk içtihat ve mevzuat arşivi: karar ve madde metni, atıf ağı, süre/faiz hesabı, künye doğrulama, dilekçe yazımı.",
   "mcpServers": {
     "imzala": {
