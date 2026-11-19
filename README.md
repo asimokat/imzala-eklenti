@@ -12,11 +12,12 @@ Arşivde 11,6 milyon Türk yargı ve düzenleyici kurul kararı, madde madde yü
 
 | Parça | Ne yapar |
 |---|---|
+| `plugin.json`, `.antigravity-plugin/plugin.json` | Eklenti tanımları (Agent Plugins / OpenAI / Kiro ve Google Antigravity Marketplace biçimleri). |
 | `mcp.json`, `mcp_config.json`, `gemini-extension.json` | `https://mcp.imzala.net/mcp` adresindeki uzak MCP sunucusuna bağlanır (24 alet). Arşive veri yazılmaz. |
 | `skills/get-started` | İlk bağlantıyı ve ilk soruları anlatır. |
 | `skills/ictihat-arastirma` | Arama yöntemi: kelime ve anlam araması birlikte, karar ve kanun maddesi okunmadan atıf yok, künye doğrulama, çift yönlü atıf ağı ve deterministik süre/tarife hesabı. |
 | `skills/dilekce-yazimi` | Dilekçe biçimi ve `md2udf.py` ile UYAP'ın UDF biçimine dönüştürme. |
-| `rules/AGENTS.md`, `GEMINI.md` | Her zaman açık kısa çalışma kuralları (aynı metin). |
+| `rules/AGENTS.md` | Her zaman açık kısa çalışma kuralları (Google Antigravity ve Gemini CLI tarafından kullanılır). |
 | `deepseek-harness/` | DeepSeek Harness için yama parçası, kurallar ve kurulum betiği. |
 
 ## Kurulum
@@ -68,7 +69,7 @@ Sorular ve sorun bildirimi için: [imzala.net/yardim](https://imzala.net/yardim)
 
 ## English
 
-This plugin connects AI tools to the imzala.net Turkish case-law and legislation archive, updated daily, through a remote MCP server at `https://mcp.imzala.net/mcp` (24 tools; nothing is written to the archive). The same content ships in several formats side by side: Agent Plugins (`plugin.json`, `mcp.json`, `skills/`), Gemini CLI (`gemini-extension.json`, `GEMINI.md`), Google Antigravity (`plugin.json`, `mcp_config.json`, `rules/AGENTS.md`) and DeepSeek Harness (`deepseek-harness/`: a `cordis.patch.yml` fragment that connects with a personal API key, plus an installer script). It includes a research-method skill, a Turkish petition-writing skill with a Markdown-to-UDF converter (standard-library Python, no network access) and an onboarding skill. Sign-in is by e-mail code (OAuth 2.1 with dynamic client registration and client ID metadata documents); tools without OAuth can use a personal API key as a Bearer token. The service is paid and starts with a 14-day trial. The content is in Turkish.
+This plugin connects AI tools to the imzala.net Turkish case-law and legislation archive, updated daily, through a remote MCP server at `https://mcp.imzala.net/mcp` (24 tools; nothing is written to the archive). The same content ships in several formats side by side: Agent Plugins (`plugin.json`, `mcp.json`, `skills/`), Google Antigravity (`.antigravity-plugin/plugin.json`, `mcp_config.json`, `rules/AGENTS.md`), Gemini CLI (`gemini-extension.json`, `rules/AGENTS.md`) and DeepSeek Harness (`deepseek-harness/`: a `cordis.patch.yml` fragment that connects with a personal API key, plus an installer script). It includes a research-method skill, a Turkish petition-writing skill with a Markdown-to-UDF converter (standard-library Python, no network access) and an onboarding skill. Sign-in is by e-mail code (OAuth 2.1 with dynamic client registration and client ID metadata documents); tools without OAuth can use a personal API key as a Bearer token. The service is paid and starts with a 14-day trial. The content is in Turkish.
 
 <!-- Bu bölüm asimokat/imzala-claude-eklenti README'sindeki İngilizce bölümle aynıdır; ikisi birlikte güncellenir. -->
 ### Tools

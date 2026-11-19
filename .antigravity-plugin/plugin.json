@@ -1,0 +1,34 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "imzala",
+  "displayName": "imzala.net İçtihat Arşivi",
+  "version": "1.1.0",
+  "description": "GÜNLÜK GÜNCELLENİR, HEP TAZE. imzala.net Türk içtihat ve mevzuat arşivi: karar ve madde metni, atıf ağı, süre/faiz hesabı, künye doğrulama, dilekçe yazımı.",
+  "logo": "assets/logo.png",
+  "suggestedPrompts": [
+    "Belirsiz alacak davasında ıslah konusunda Yargıtay ne diyor?",
+    "Yargıtay 3. HD 2023/1532 E. 2024/250 K. kararı gerçekten var mı?",
+    "HMK 107. maddeye dayanan kararlarda hangi daire baskın?"
+  ],
+  "author": {
+    "name": "imzala.net",
+    "email": "imza@imzala.net",
+    "url": "https://imzala.net"
+  },
+  "homepage": "https://imzala.net/yapay-zeka",
+  "repository": "https://github.com/asimokat/imzala-eklenti",
+  "license": "MIT",
+  "keywords": [
+    "hukuk",
+    "içtihat",
+    "mevzuat",
+    "yargıtay",
+    "danıştay",
+    "dilekçe",
+    "türk hukuku",
+    "turkish law",
+    "case law",
+    "legal research",
+    "mcp"
+  ]
+}
