@@ -1,0 +1,31 @@
+name: Validate Antigravity Plugin
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Antigravity CLI (agy)
+        run: |
+          curl -fsSL https://antigravity.google/cli/install.sh | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Validate plugin (official multi-tool CI check)
+        run: |
+          agy plugin validate .
+          agy plugin validate --json . | jq -e '
+            .manifest as $manifest |
+            [.findings[] | select(
+              .severity == "error" or (
+                .severity == "warning" and
+                (.file != ".mcp.json" and .file != "mcp.json" and .file != "AGENTS.md") and
+                (.file != "plugin.json" or $manifest == "plugin.json")
+              )
+            )] | length == 0
+          '
